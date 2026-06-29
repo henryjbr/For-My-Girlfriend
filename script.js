@@ -41,10 +41,28 @@ document.addEventListener("pointermove", (event) => {
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    if (entry.isIntersecting) entry.target.classList.add("is-visible");
+    if (entry.isIntersecting) {
+      entry.target.classList.add("is-visible");
+      return;
+    }
+
+    entry.target.classList.remove("is-visible");
+    const leftThroughTop = entry.boundingClientRect.top < 0;
+    entry.target.classList.toggle("is-above", leftThroughTop);
+    entry.target.classList.toggle("is-below", !leftThroughTop);
   });
-}, { threshold: .15 });
-document.querySelectorAll(".reveal, .gallery-reveal").forEach((item) => observer.observe(item));
+}, {
+  threshold: 0,
+  rootMargin: "-5% 0px -5% 0px"
+});
+
+document
+  .querySelectorAll(".memory__photo, .reason-card, .letter__envelope, .love-button")
+  .forEach((item) => item.classList.add("scroll-reveal"));
+
+document
+  .querySelectorAll(".reveal, .gallery-reveal, .scroll-reveal")
+  .forEach((item) => observer.observe(item));
 
 function updateCounter() {
   const elapsed = Math.max(0, Date.now() - new Date(CONFIG.startDate).getTime());

@@ -490,6 +490,9 @@ main.is-visible .hero__title .line:nth-child(2) > span { transform: translateY(0
   opacity: 0;
   transform: translateY(85px) rotate(var(--rotation)) scale(.94);
 }
+.gallery-reveal.is-above {
+  transform: translateY(-70px) rotate(var(--rotation)) scale(.96);
+}
 .gallery-reveal.is-visible {
   opacity: 1;
   transform: translateY(0) rotate(var(--rotation)) scale(1);
@@ -613,8 +616,37 @@ main.is-visible .hero__title .line:nth-child(2) > span { transform: translateY(0
 
 .petal { position: fixed; z-index: 900; top: -20px; width: 8px; height: 12px; pointer-events: none; border-radius: 80% 0 80% 0; background: var(--rose); opacity: .5; animation: fall linear forwards; }
 .reveal { opacity: 0; transform: translateY(35px); transition: opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1); }
+.reveal.is-above { transform: translateY(-35px); }
 .reveal.is-visible { opacity: 1; transform: translateY(0); }
+.scroll-reveal {
+  opacity: 0;
+  translate: 0 48px;
+  transition:
+    opacity .85s ease,
+    translate .9s cubic-bezier(.2,.75,.2,1),
+    transform .35s ease,
+    padding .35s,
+    background .35s;
+  will-change: opacity, translate;
+}
+.scroll-reveal.is-above { translate: 0 -42px; }
+.scroll-reveal.is-visible { opacity: 1; translate: 0 0; }
+.reason-card.scroll-reveal:nth-child(2) { transition-delay: .06s; }
+.reason-card.scroll-reveal:nth-child(3) { transition-delay: .12s; }
+.reason-card.scroll-reveal:nth-child(4) { transition-delay: .18s; }
 .tilt-card { transition: transform .18s ease-out; transform-style: preserve-3d; }
+.tilt-card.scroll-reveal {
+  transition:
+    opacity .85s ease,
+    translate .9s cubic-bezier(.2,.75,.2,1),
+    transform .18s ease-out;
+}
+.letter__envelope.scroll-reveal {
+  transition:
+    opacity .85s ease,
+    translate .9s cubic-bezier(.2,.75,.2,1),
+    transform .9s cubic-bezier(.2,.75,.2,1);
+}
 
 .lightbox { position: fixed; inset: 0; z-index: 1100; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 30px; background: rgba(8,3,6,.94); opacity: 0; visibility: hidden; transition: .35s; }
 .lightbox.is-open { opacity: 1; visibility: visible; }
