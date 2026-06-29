@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#12080f">
+  <meta name="description" content="Uma história de amor contada em memórias, fotos e pequenos instantes.">
+  <title>Nosso primeiro ano ♥</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Italiana&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="petals" id="petals" aria-hidden="true"></div>
+
+  <div class="intro" id="intro">
+    <div class="intro__halo"></div>
+    <p class="eyebrow intro__eyebrow">29 · 06 · 2025</p>
+    <h1 class="intro__title">Para o meu<br><em>grande amor.</em></h1>
+    <p class="intro__copy">Fiz um pequeno lugar no mundo só para guardar um pouco do que sinto por você.</p>
+    <button class="open-button" id="openButton" type="button">
+      <span>Abrir nossa história</span>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+    </button>
+  </div>
+
+  <main id="mainContent" aria-hidden="true">
+    <nav class="nav" id="nav">
+      <a class="nav__brand" href="#inicio">M <span>♥</span> H</a>
+      <div class="nav__links">
+        <a href="#historia">História</a>
+        <a href="#momentos">Momentos</a>
+        <a href="#carta">Carta</a>
+      </div>
+      <button class="sound-button" id="soundButton" type="button" aria-label="Tocar música">
+        <span class="sound-bars"><i></i><i></i><i></i></span>
+        <span class="sound-label">Velha Infância</span>
+      </button>
+    </nav>
+
+    <section class="hero" id="inicio">
+      <div class="hero__orb hero__orb--one"></div>
+      <div class="hero__orb hero__orb--two"></div>
+      <div class="hero__heart" aria-hidden="true">
+        <svg viewBox="0 0 800 720" role="presentation">
+          <defs>
+            <linearGradient id="heartStroke" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#ead8cc" stop-opacity=".06"/>
+              <stop offset="42%" stop-color="#d78491" stop-opacity=".52"/>
+              <stop offset="72%" stop-color="#9e5266" stop-opacity=".24"/>
+              <stop offset="100%" stop-color="#ead8cc" stop-opacity=".03"/>
+            </linearGradient>
+            <filter id="heartGlow" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="5"/>
+            </filter>
+          </defs>
+          <path class="hero__heart-glow" d="M400 654C348 607 116 449 116 244C116 130 254 80 340 168C369 198 390 230 400 250C410 230 431 198 460 168C546 80 684 130 684 244C684 449 452 607 400 654Z"/>
+          <path class="hero__heart-echo hero__heart-echo--one" d="M400 654C348 607 116 449 116 244C116 130 254 80 340 168C369 198 390 230 400 250C410 230 431 198 460 168C546 80 684 130 684 244C684 449 452 607 400 654Z"/>
+          <path class="hero__heart-echo hero__heart-echo--two" d="M400 654C348 607 116 449 116 244C116 130 254 80 340 168C369 198 390 230 400 250C410 230 431 198 460 168C546 80 684 130 684 244C684 449 452 607 400 654Z"/>
+          <path class="hero__heart-line" pathLength="1" d="M400 654C348 607 116 449 116 244C116 130 254 80 340 168C369 198 390 230 400 250C410 230 431 198 460 168C546 80 684 130 684 244C684 449 452 607 400 654Z"/>
+          <circle class="hero__heart-spark hero__heart-spark--one" cx="177" cy="164" r="2.5"/>
+          <circle class="hero__heart-spark hero__heart-spark--two" cx="618" cy="428" r="2"/>
+        </svg>
+      </div>
+      <div class="hero__content">
+        <p class="eyebrow reveal">UM ANO DE NÓS</p>
+        <h2 class="hero__title">
+          <span class="line"><span>Você fez a vida</span></span>
+          <span class="line"><span>ficar mais <em>bonita.</em></span></span>
+        </h2>
+        <p class="hero__text reveal">Há um ano, começamos a escrever a minha história favorita. E eu escolheria você em todas as versões da minha vida.</p>
+        <a class="scroll-hint" href="#historia">
+          <span>Role para reviver</span>
+          <i></i>
+        </a>
+      </div>
+
+      <div class="hero__photo photo-placeholder tilt-card">
+        <div class="photo-placeholder__inner">
+          <span class="photo-number">01</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4zM4 15l4-4 4 4 2-2 6 6M16 9h.01"/></svg>
+          <strong>Coloque aqui<br>a foto de vocês</strong>
+        </div>
+        <div class="photo-caption">onde tudo faz sentido ✦</div>
+      </div>
+
+      <div class="hero__date">
+        <span>365</span>
+        <small>dias escolhendo<br>um ao outro</small>
+      </div>
+    </section>
+
+    <section class="counter-section">
+      <p class="counter-section__lead reveal">Eu amo você há</p>
+      <div class="counter" id="counter">
+        <div><strong id="days">365</strong><span>dias</span></div>
+        <i>:</i>
+        <div><strong id="hours">00</strong><span>horas</span></div>
+        <i>:</i>
+        <div><strong id="minutes">00</strong><span>minutos</span></div>
+        <i>:</i>
+        <div><strong id="seconds">00</strong><span>segundos</span></div>
+      </div>
+      <p class="counter-section__note reveal">e cada segundo continua valendo a pena.</p>
+    </section>
+
+    <section class="our-song section" id="nossa-musica">
+      <div class="our-song__vinyl reveal" aria-hidden="true">
+        <div class="our-song__vinyl-center">M <span>♥</span> H</div>
+      </div>
+      <div class="our-song__content">
+        <p class="eyebrow reveal">Lhe dedico essa música</p>
+        <h2 class="reveal">Me faz lembrar de ti</h2>
+        <p class="our-song__dedication reveal">Toda vez que ela toca, penso em você, no seu carinho e em como é bonito dividir a vida ao seu lado. Se a nossa história tivesse uma melodia, eu gostaria que ela soasse exatamente assim.</p>
+        <div class="our-song__player reveal">
+          <div id="spotify-embed"></div>
+        </div>
+        <p class="our-song__note reveal">Velha Infância · Tribalistas</p>
+      </div>
+    </section>
+
+    <section class="story section" id="historia">
+      <header class="section-heading">
+        <p class="eyebrow reveal">CAPÍTULO POR CAPÍTULO</p>
+        <h2 class="reveal">A nossa história</h2>
+        <p class="reveal">Alguns instantes passam. Outros viram casa dentro da gente.</p>
+      </header>
+
+      <div class="timeline">
+        <div class="timeline__line"><span id="timelineProgress"></span></div>
+
+        <article class="memory memory--left">
+          <div class="memory__photo photo-placeholder tilt-card">
+            <div class="photo-placeholder__inner">
+              <span class="photo-number">02</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4zM4 15l4-4 4 4 2-2 6 6"/></svg>
+              <strong>Nossa primeira foto</strong>
+            </div>
+          </div>
+          <div class="memory__copy reveal">
+            <span class="memory__date">O COMEÇO · JUN 2025</span>
+            <h3>O dia em que<br>tudo começou</h3>
+            <p>Talvez a gente ainda não soubesse, mas naquele dia a vida já começava a mudar de direção. Entre conversas, sorrisos tímidos e aquela vontade de fazer o tempo passar mais devagar, nasceu algo que logo se tornaria o meu lugar favorito. Foi o começo de nós — simples, bonito e inesquecível.</p>
+          </div>
+        </article>
+
+        <article class="memory memory--right">
+          <div class="memory__copy reveal">
+            <span class="memory__date">NOSSA AVENTURA FAVORITA</span>
+            <h3>Quando o mundo<br>era só nosso</h3>
+            <p>Com você, até os caminhos mais comuns ganham outro encanto. Não importa tanto o destino, porque a melhor parte sempre é dividir o trajeto, as risadas inesperadas e os planos inventados pelo caminho. Ao seu lado, descobri que aventura é qualquer lugar onde possamos viver o mundo juntos.</p>
+          </div>
+          <div class="memory__photo photo-placeholder tilt-card">
+            <div class="photo-placeholder__inner">
+              <span class="photo-number">03</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4zM4 15l4-4 4 4 2-2 6 6"/></svg>
+              <strong>Uma aventura nossa</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="memory memory--left">
+          <div class="memory__photo photo-placeholder tilt-card">
+            <div class="photo-placeholder__inner">
+              <span class="photo-number">04</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4zM4 15l4-4 4 4 2-2 6 6"/></svg>
+              <strong>Meu sorriso favorito</strong>
+            </div>
+          </div>
+          <div class="memory__copy reveal">
+            <span class="memory__date">UM INSTANTE ESPECIAL</span>
+            <h3>Você nos meus<br>dias favoritos</h3>
+            <p>Você está presente nas lembranças que eu mais gosto de revisitar e também nos pequenos instantes que fazem os dias valerem a pena. É carinho quando preciso, parceria em cada escolha e paz nos seus abraços. Amar você transformou momentos comuns em memórias que quero guardar para sempre.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="reasons section">
+      <div class="reasons__sticky">
+        <p class="eyebrow">PEQUENAS GRANDES COISAS</p>
+        <h2>Coisas que eu<br><em>amo em você</em></h2>
+        <p>Toque nos cartões. Algumas coisas merecem ser ditas mais de uma vez.</p>
+      </div>
+      <div class="reasons__cards">
+        <button class="reason-card" type="button">
+          <span>01</span><h3>Seu sorriso</h3>
+          <p>Porque ele consegue iluminar até os meus dias mais nublados.</p>
+          <i>♥</i>
+        </button>
+        <button class="reason-card" type="button">
+          <span>02</span><h3>Seu jeito</h3>
+          <p>Porque até os seus detalhes mais pequenos me fazem escolher você.</p>
+          <i>♥</i>
+        </button>
+        <button class="reason-card" type="button">
+          <span>03</span><h3>Seu abraço</h3>
+          <p>Porque nele eu entendi que casa também pode ser uma pessoa.</p>
+          <i>♥</i>
+        </button>
+        <button class="reason-card" type="button">
+          <span>04</span><h3>Nós dois</h3>
+          <p>Porque ao seu lado a vida parece mais leve, inteira e cheia de futuro.</p>
+          <i>♥</i>
+        </button>
+      </div>
+    </section>
+
+    <section class="gallery section" id="momentos">
+      <header class="section-heading">
+        <p class="eyebrow reveal">NOSSO FILME EM FOTOS</p>
+        <h2 class="reveal">Momentos que moram em mim</h2>
+      </header>
+      <div class="gallery__grid">
+        <button class="gallery-card gallery-card--tall gallery-reveal photo-placeholder" data-photo="assets/f8.png" type="button">
+          <span>05</span><strong>Nós dois</strong>
+        </button>
+        <button class="gallery-card gallery-reveal photo-placeholder" data-photo="assets/f7.png" type="button">
+          <span>06</span><strong>Um dia feliz</strong>
+        </button>
+        <blockquote class="gallery__quote reveal">“Nobody understands how conected we are” <span>— com todo meu amor</span></blockquote>
+        <button class="gallery-card gallery-reveal photo-placeholder" data-photo="assets/f6.png" type="button">
+          <span>07</span><strong>Nossa aventura</strong>
+        </button>
+        <button class="gallery-card gallery-card--wide gallery-reveal photo-placeholder" data-photo="assets/f5.png" type="button">
+          <span>08</span><strong>Um pedacinho da nossa história</strong>
+        </button>
+      </div>
+    </section>
+
+    <section class="letter section" id="carta">
+      <div class="letter__glow"></div>
+      <div class="letter__envelope" id="envelope">
+        <div class="envelope__back"></div>
+        <div class="envelope__paper">
+          <p>Meu amor,</p>
+          <p>Um ano pode parecer apenas um pedaço do tempo, mas dentro dele coube um mundo inteiro: nossas risadas, nossas conversas, os abraços demorados e todos os momentos que fizeram a vida ficar mais bonita.</p>
+          <p>Obrigado por ser minha parceira, meu carinho e o meu lugar seguro. Que este seja apenas o primeiro capítulo de uma história enorme que ainda vamos escrever.</p>
+          <blockquote class="letter__song">“Você é assim, um sonho pra mim.”<span>Velha Infância · Tribalistas</span></blockquote>
+          <p>Eu amo você — hoje, amanhã e em todos os dias que vierem.</p>
+          <strong>Com todo o meu amor,</strong>
+          <em>Henry ♥</em>
+        </div>
+        <div class="envelope__front"></div>
+        <div class="envelope__flap"></div>
+        <button class="envelope__seal" id="sealButton" type="button" aria-label="Abrir carta">♥</button>
+      </div>
+      <p class="letter__hint" id="letterHint">toque no coração para abrir</p>
+    </section>
+
+    <section class="finale">
+      <div class="finale__stars" aria-hidden="true"></div>
+      <p class="eyebrow reveal">E AINDA É SÓ O COMEÇO</p>
+      <h2 class="reveal">Feliz um ano<br><em>para nós.</em></h2>
+      <button class="love-button" id="loveButton" type="button">
+        <span>Eu te amo</span><i>♥</i>
+      </button>
+      <p class="finale__signature">Feito com amor, especialmente para você.</p>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ampliada">
+    <button id="closeLightbox" type="button" aria-label="Fechar">×</button>
+    <img id="lightboxImage" alt="Uma memória nossa">
+    <p id="lightboxMessage">Adicione esta foto na pasta assets para vê-la aqui ♥</p>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
+</body>
+</html>

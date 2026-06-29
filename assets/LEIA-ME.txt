@@ -1,0 +1,20 @@
+PERSONALIZAÇÃO RÁPIDA
+=====================
+
+As imagens usadas atualmente são:
+
+f1.png   - foto de destaque no começo do site
+f2.png   - primeira lembrança da linha do tempo
+f3.png   - segunda lembrança da linha do tempo
+f4.png   - terceira lembrança da linha do tempo
+f5.png   - galeria
+f6.png   - galeria
+f7.png   - galeria
+f8.png   - galeria
+
+Para a música, coloque um arquivo MP3 com o nome:
+
+nossa-musica.mp3
+
+Textos e nomes podem ser alterados diretamente no arquivo index.html.
+A data do início do namoro pode ser alterada no começo do arquivo script.js.
